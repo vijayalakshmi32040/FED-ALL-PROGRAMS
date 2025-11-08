@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f9fa;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        background: #333;
+        padding: 10px 20px;
+        color: white;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-style: italic;
+        flex: 1;
+    }
+    nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: normal;
+        transition: all 0.3s ease;
+    }
+    nav a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #ffcc00;
+    }
+    section {
+        padding: 20px;
+    }
+    .about img {
+        width: 150px;
+        border-radius: 50%;
+    }
+    .skills {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .skill {
+        text-align: center;
+    }
+    .skill img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+    .projects, .recommendations {
+        margin-top: 20px;
+    }
+    .project, .recommendation {
+        background: white;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .home-icon {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    button {
+        background: #28a745;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #218838;
+    }
+    textarea {
+        width: 100%;
+        max-width: 500px;
+    }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <span class="home-icon">🏠</span>
+    <h1>Vijaya Lakshmi</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Project details</a>
+        <a href="#skills">Skills</a>
+        <a href="#recommendations">Recommendations</a>
+    </nav>
+</header>
+
+<!-- ABOUT ME -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <p>Hello! I'm Vijaya Lakshmi, an aspiring data analyst passionate about Python, data visualization, and creating meaningful insights from datasets.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+            <p>Python</p>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matplotlib_icon.svg" alt="Matplotlib">
+            <p>Matplotlib</p>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas">
+            <p>Pandas</p>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Data_visualization_icon.png" alt="Data Visualization">
+            <p>Data Visualization</p>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-Learn">
+            <p>Scikit-Learn</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>📊 Diabetes Data Analysis</h3>
+        <p>Analyzed patient data to find correlations between glucose levels, age, and health outcomes.</p>
+    </div>
+    <div class="project">
+        <h3>📈 Sales Forecasting</h3>
+        <p>Used time-series analysis to predict sales trends for a retail company.</p>
+    </div>
+    <div class="project">
+        <h3>🌦 Weather Data Visualization</h3>
+        <p>Created interactive charts showing temperature and rainfall patterns using Python.</p>
+    </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section id="recommendations" class="recommendations">
+    <h2>Recommendations</h2>
+    <div class="recommendation">"Vijaya is a dedicated learner with strong problem-solving skills."</div>
+    <div class="recommendation">"Her ability to present complex data clearly is impressive."</div>
+    <div class="recommendation">"A quick learner who always meets deadlines."</div>
+
+    <h3>Add a Recommendation</h3>
+    <textarea id="recText" rows="3" placeholder="Write your recommendation..."></textarea><br><br>
+    <button onclick="addRecommendation()">Submit</button>
+</section>
+
+<script>
+function addRecommendation() {
+    let text = document.getElementById('recText').value.trim();
+    if (text) {
+        let newRec = document.createElement('div');
+        newRec.className = 'recommendation';
+        newRec.textContent = `"${text}"`;
+        document.querySelector('.recommendations').insertBefore(newRec, document.querySelector('.recommendations h3'));
+        document.getElementById('recText').value = '';
+        alert('Thank you for leaving a recommendation!');
+    } else {
+        alert('⚠ Please enter a recommendation before submitting.');
+    }
+}
+</script>
+
+</body>
+</html>

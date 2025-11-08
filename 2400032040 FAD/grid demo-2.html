@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 10% 20% 60% 10%;
+      /* No gap to avoid white space */
+    }
+
+    .header {
+      grid-column: 1 / 5;
+      background-color: lightcoral;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .box1, .box2, .box3, .sidebar, .main, .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .box1 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      background-color: lightgreen;
+    }
+
+    .box2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      background-color: teal;
+      color: white;
+    }
+
+    .box3 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      background-color: pink;
+    }
+
+    .sidebar {
+      grid-column: 4 / 5;
+      grid-row: 2 / 4;
+      background-color: goldenrod;
+    }
+
+    .main {
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+      background-color: plum;
+    }
+
+    .footer {
+      grid-column: 1 / 5;
+      grid-row: 4 / 5;
+      background-color: lightslategray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">KL University</div>
+    <div class="box1">Small box1</div>
+    <div class="box2">Small box2</div>
+    <div class="box3">Small box3</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varaiables</title>
+</head>
+<body>
+    <script>
+        var x=100;
+        document.write(x, "<br>");
+        var x=200;
+        document.write(x+x, "<br>");
+    
+
+        let z=30;//global declaration
+        document.write(z, "<br>");
+        {
+            let z=40;//local declaration
+            document.write(z, "<br>");
+        }
+        document.write(z, "<br>");//here global value should be print but due to global pollution it was printing local value
+
+        const i=25;
+        document.write(i, "<br>");
+        const j=35;
+        document.write(j, "<br>");
+        {
+            const i=45;
+            document.write(i, "<br>");
+        }
+        let a=10;
+        let b=0.2;
+        let c=true;
+        d="vijju";
+        e=null;
+        document.write(typeof(a), "<br>");
+        document.write(typeof(b), "<br>");
+        document.write(typeof(c), "<br>");
+        document.write(typeof(d), "<br>");
+        document.write(typeof(e), "<br>");
+
+        //how to write function
+        function kl_fun(){
+            return "this is simple return from the function";
+        }
+        kl_fun();
+        document.write(kl_fun(),"<br>");
+        document.write(typeof 100,"<br>");
+        document.write(typeof 23.6,"<br>");
+        document.write(typeof "vijju","<br>");
+        document.write(typeof [],"<br>");
+        document.write(typeof {},"<br>");
+        document.write(typeof kl_fun(),"<br>");
+        document.write(typeof false,"<br>");
+        document.write(typeof 100n,"<br>");
+        var m=50;
+        document.write(m,"<br>");
+        m+=10;
+        document.write(m,"<br>");
+        n=5;
+        n++;
+        document.write(n,"<br>");
+    
+    </script>
+</body>
+</html>

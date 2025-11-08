@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin-left: 20px;
+    }
+
+    .auth a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px auto;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .profile-image img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 2px solid #444;
+      object-fit: cover;
+    }
+
+    .profile-details {
+      font-size: 18px;
+    }
+
+    .profile-details p {
+      margin: 15px 0;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .social-icons i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Profile</h1>
+    <div class="auth">
+      <a href="#">Login</a>
+      <a href="#">Signup</a>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile-container">
+    <div class="profile-image">
+      <img src="https://via.placeholder.com/180" alt="Profile Picture">
+    </div>
+    <div class="profile-details">
+      <p><strong>Name:</strong> ____________________</p>
+      <p><strong>Regd. No:</strong> ____________________</p>
+      <p><strong>Department:</strong> ____________________</p>
+      <p><strong>Email:</strong> ____________________</p>
+      <p><strong>Contact:</strong> ____________________</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 All Rights Reserved</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
+
+</body>
+</html>
